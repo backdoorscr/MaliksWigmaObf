@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Malik's Wigma Obf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Very simple Luau one-line obfuscator for fun."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>Malik's Wigma Obf</h1>
+        <p class="subtitle">
+          Paste your Luau code below and get a very simple one-line obfuscation.
+        </p>
+      </header>
+
+      <main class="main">
+        <section class="panel">
+          <label for="input" class="panel-label">Input Luau</label>
+          <textarea
+            id="input"
+            class="panel-textarea"
+            placeholder="-- paste your Luau code here"
+          ></textarea>
+        </section>
+
+        <div class="controls">
+          <button id="obfuscateBtn" class="btn primary">Obfuscate</button>
+          <button id="clearBtn" class="btn">Clear</button>
+          <button id="copyBtn" class="btn">Copy Output</button>
+          <span id="status" class="status"></span>
+        </div>
+
+        <section class="panel">
+          <label for="output" class="panel-label">Obfuscated Output</label>
+          <textarea
+            id="output"
+            class="panel-textarea"
+            readonly
+            placeholder="-- obfuscated by Malik's wigma obf&#10;..."
+          ></textarea>
+        </section>
+
+        <section class="info">
+          <h2>What this does</h2>
+          <ul>
+            <li>Adds a header comment line:
+              <code>-- obfuscated by Malik's wigma obf</code>
+            </li>
+            <li>Flattens your Luau into a single line.</li>
+            <li>Compresses repeated whitespace into single spaces.</li>
+          </ul>
+          <p class="disclaimer">
+            This is intentionally <strong>very simple</strong> and may not
+            preserve behavior for all Luau scripts. Use at your own risk.
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Made for fun · Hostable on Vercel as a static site</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
